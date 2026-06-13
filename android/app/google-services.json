@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "767771528346",
+    "project_id": "moneypilot-4069e",
+    "storage_bucket": "moneypilot-4069e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:767771528346:android:b605b02a6ce62c992e6323",
+        "android_client_info": {
+          "package_name": "com.moneypilot.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAf_fGsgnPipYYhtLQhzOWOdOca9P58N5M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
