@@ -349,3 +349,162 @@ lib/
     └── widgets/
 
 The exact folder structure may evolve as new modules are introduced.
+
+🧠 Domain Layer
+
+Located under:
+
+lib/domain/
+
+The domain layer contains the application's core business concepts and contracts.
+
+Entities
+
+Examples include:
+
+UserEntity
+
+ExpenseEntity
+
+IncomeEntity
+
+BudgetEntity
+
+Transaction-related entities
+
+Entities are designed to represent application data independently of external storage technologies.
+
+Repository Contracts
+
+Repository interfaces define the operations required by the business layer without depending directly on SQLite or Firestore.
+
+Examples:
+
+ExpenseRepository
+IncomeRepository
+BudgetRepository
+AuthRepository
+
+💾 Data Layer
+
+Located under:
+
+lib/data/
+
+The data layer handles communication between the domain layer and external data sources.
+
+Local Data
+
+SQLite provides local persistence through sqflite.
+
+Responsibilities include:
+
+Database initialization
+
+Table management
+
+CRUD operations
+
+Schema migrations
+
+Pending synchronization operations
+
+Local transaction storage
+
+Remote Data
+
+Firestore provides cloud synchronization.
+
+Responsibilities include:
+
+Remote document operations
+
+Cloud synchronization
+
+Remote data mapping
+
+Synchronization of pending local operations
+
+Models
+
+Data models translate between storage representations and domain entities.
+
+Typical serialization methods include:
+
+fromMap()
+toMap()
+
+fromFirestore()
+toFirestore()
+
+🎨 Presentation Layer
+
+The presentation layer is responsible for the application's user interface and interaction.
+
+Money Pilot uses GetX for:
+
+State management
+
+Dependency injection
+
+Navigation
+
+Reactive UI updates
+
+Controller lifecycle management
+
+The interface follows a modern visual style using Outfit typography, clean layouts, animations, and financial dashboard components.
+
+🛠️ Technology Stack
+
+Technology
+
+Purpose
+
+Flutter
+
+Cross-platform application framework
+
+Dart
+
+Programming language
+
+GetX
+
+State management, routing & dependency injection
+
+SQLite / sqflite
+
+Local database
+
+Firebase Core
+
+Firebase initialization
+
+Firebase Auth
+
+Authentication
+
+Cloud Firestore
+
+Cloud synchronization
+
+fl_chart
+
+Financial analytics
+
+local_auth
+
+Biometric authentication
+
+flutter_local_notifications
+
+Local notifications
+
+pdf
+
+PDF document generation
+
+printing
+
+PDF printing and sharing
