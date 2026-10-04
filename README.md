@@ -508,3 +508,93 @@ PDF document generation
 printing
 
 PDF printing and sharing
+
+🔄 Application Data Flow
+
+                    Flutter UI
+                       │
+                       ↓
+                  GetX Controller
+                       │
+                       ↓
+                  Repository
+                       │
+             ┌─────────┴─────────┐
+             ↓                   ↓
+         SQLite              Firestore
+             │                   │
+             ↓                   ↓
+       Local Source         Cloud Storage
+             │
+             ↓
+        Sync Queue
+             │
+             ↓
+       Connectivity
+             │
+             ↓
+      Remote Synchronization
+
+🚀 Setup & Installation
+
+1. Prerequisites
+
+Install Flutter and configure a development environment.
+
+Verify your Flutter installation:
+
+flutter doctor
+
+Money Pilot requires a Flutter version compatible with the project's dependencies.
+
+2. Clone the Repository
+
+git clone <repository-url>
+
+Navigate to the project:
+
+cd money_pilot
+
+3. Configure Firebase
+
+Create a Firebase project and configure the required platforms.
+
+Android
+
+Place the Firebase configuration file at:
+
+android/app/google-services.json
+
+iOS
+
+Place the Firebase configuration file at:
+
+ios/Runner/GoogleService-Info.plist
+
+Make sure the Firebase project is configured for the application package/bundle identifiers.
+
+4. Install Dependencies
+
+flutter pub get
+
+5. Generate Launcher Icons
+
+The application uses:
+
+assets/images/logo.png
+
+To regenerate launcher icons:
+
+flutter pub run flutter_launcher_icons
+
+6. Run the Application
+
+flutter run
+
+To run on a specific device:
+
+flutter devices
+
+Then:
+
+flutter run -d <device-id>
