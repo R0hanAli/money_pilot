@@ -180,3 +180,105 @@ Wait   Sync
  └───→ Firestore
 
 This approach allows the application to remain useful even when network connectivity is unreliable.
+
+☁️ Cloud Synchronization
+
+Firebase Firestore provides remote synchronization for application data.
+
+The synchronization system coordinates:
+
+Local SQLite data
+
+Pending synchronization operations
+
+Connectivity state
+
+Firestore updates
+
+Local-to-cloud data consistency
+
+When the device comes back online, queued operations can be synchronized with the remote database.
+
+🔐 Biometric Authentication
+
+Money Pilot supports local biometric authentication using local_auth.
+
+Depending on device capabilities, users can authenticate using:
+
+Fingerprint
+
+Face authentication
+
+Other supported biometric methods
+
+The application is designed to provide graceful fallback behavior when biometric authentication is unavailable.
+
+Biometric authentication is device-level protection and should be combined with appropriate application and data security practices.
+
+📄 PDF Financial Statements
+
+Money Pilot can generate professional PDF financial statements using the pdf and printing packages.
+
+Generated reports can include:
+
+Income transactions
+
+Expense transactions
+
+Transaction totals
+
+Budget information
+
+Budget usage
+
+Financial summaries
+
+Reporting periods
+
+Analytical information
+
+These reports can be printed or shared using supported platform functionality.
+
+Financial Data
+      ↓
+Report Generation
+      ↓
+PDF Document
+      ↓
+Print / Share / Save
+
+🌍 Multi-Currency Support
+
+Money Pilot supports displaying financial information using multiple currency codes.
+
+Supported currencies include:
+
+Currency
+
+Code
+
+🇺🇸 US Dollar
+
+USD
+
+🇵🇰 Pakistani Rupee
+
+PKR
+
+🇪🇺 Euro
+
+EUR
+
+🇬🇧 British Pound
+
+GBP
+
+🇦🇪 UAE Dirham
+
+AED
+
+🇸🇦 Saudi Riyal
+
+SAR
+
+The application can switch the displayed currency according to the configured user preference.
