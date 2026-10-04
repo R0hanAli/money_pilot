@@ -282,3 +282,70 @@ AED
 SAR
 
 The application can switch the displayed currency according to the configured user preference.
+
+🏗️ Architecture
+
+Money Pilot follows a 3-layer Clean Architecture approach designed to separate business logic, data access, and presentation concerns.
+
+┌─────────────────────────────────────┐
+│            Presentation             │
+│                                     │
+│  Pages • Widgets • Controllers      │
+│  Bindings • Navigation              │
+└──────────────────┬──────────────────┘
+                   │
+                   ↓
+┌─────────────────────────────────────┐
+│               Domain                │
+│                                     │
+│  Entities • Repository Contracts    │
+│  Business Rules                     │
+└──────────────────┬──────────────────┘
+                   │
+                   ↓
+┌─────────────────────────────────────┐
+│                Data                 │
+│                                     │
+│  Models • Data Sources              │
+│  SQLite • Firestore                 │
+│  Repository Implementations         │
+└─────────────────────────────────────┘
+
+This structure helps keep the application's business logic independent from specific storage and UI implementations.
+
+📁 Project Structure
+
+lib/
+│
+├── core/
+│   ├── configuration/
+│   ├── services/
+│   ├── theme/
+│   └── utils/
+│
+├── domain/
+│   ├── entities/
+│   └── repositories/
+│
+├── data/
+│   ├── models/
+│   ├── datasources/
+│   │   ├── local/
+│   │   └── remote/
+│   └── repositories/
+│
+├── features/
+│   ├── authentication/
+│   ├── dashboard/
+│   ├── expenses/
+│   ├── income/
+│   ├── budgets/
+│   ├── analytics/
+│   ├── transactions/
+│   └── reports/
+│
+└── presentation/
+    ├── navigation/
+    └── widgets/
+
+The exact folder structure may evolve as new modules are introduced.
