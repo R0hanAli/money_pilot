@@ -29,3 +29,74 @@ Protect the application with biometric authentication
 Export financial statements as PDF documents
 
 Display financial information in different currencies
+🧩 Core Features
+
+💸 Income & Expense Tracking
+
+Record and manage day-to-day financial transactions.
+
+Expenses
+
+Add expenses
+
+Assign expense categories
+
+Track spending amounts
+
+Review transaction history
+
+Search and filter transactions
+
+Income
+
+Record income sources
+
+Track incoming funds
+
+Review income history
+
+Compare income against expenses
+
+📊 Financial Analytics
+
+Money Pilot provides visual insights into personal finances using interactive charts.
+
+Analytics can include:
+
+Spending trends
+
+Income trends
+
+Expense distribution
+
+Category-based spending
+
+Inflow vs. outflow
+
+Weekly summaries
+
+Monthly financial activity
+
+The application uses fl_chart to render interactive financial visualizations.
+
+Income
+  │
+  ├── Salary
+  ├── Business
+  └── Other Income
+          │
+          ↓
+     Total Income
+          │
+          ↓
+      ┌─────────┐
+      │ Balance │
+      └─────────┘
+          ↑
+          │
+      Total Expenses
+          │
+  ├── Food
+  ├── Transport
+  ├── Bills
+  └── Other
