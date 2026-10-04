@@ -100,3 +100,83 @@ Income
   ├── Transport
   ├── Bills
   └── Other
+
+🎯 Budget Management
+
+Create spending limits to maintain better control over monthly finances.
+
+Money Pilot supports:
+
+Monthly spending limits
+
+Category-specific limits
+
+Budget usage tracking
+
+Spending progress
+
+Budget monitoring
+
+Example:
+
+Monthly Budget
+      │
+      ├── Food          → PKR 20,000
+      ├── Transport     → PKR 10,000
+      ├── Bills         → PKR 25,000
+      └── Shopping      → PKR 15,000
+
+This allows users to identify categories where spending is approaching or exceeding their configured limits.
+
+📱 Offline-First Architecture
+
+One of Money Pilot's core design goals is offline usability.
+
+SQLite acts as the primary local data source, allowing users to access and modify their financial information even when there is no internet connection.
+
+                    ┌──────────────┐
+                    │ Flutter App  │
+                    └──────┬───────┘
+                           │
+                           ↓
+                    ┌──────────────┐
+                    │    SQLite    │
+                    │ Source of    │
+                    │    Truth     │
+                    └──────┬───────┘
+                           │
+                    Local Changes
+                           │
+                           ↓
+                    ┌──────────────┐
+                    │  Sync Queue  │
+                    └──────┬───────┘
+                           │
+                    Internet Available
+                           │
+                           ↓
+                    ┌──────────────┐
+                    │   Firestore  │
+                    └──────────────┘
+
+Offline Workflow
+
+User Action
+    ↓
+Save Locally
+    ↓
+SQLite Updated Immediately
+    ↓
+Add Operation to Sync Queue
+    ↓
+Connectivity Available?
+    │
+ ┌──┴───┐
+ No     Yes
+ │       │
+ ↓       ↓
+Wait   Sync
+ │       │
+ └───→ Firestore
+
+This approach allows the application to remain useful even when network connectivity is unreliable.
