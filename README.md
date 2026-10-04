@@ -598,3 +598,125 @@ flutter devices
 Then:
 
 flutter run -d <device-id>
+
+🧪 Development & Testing
+
+Analyze the project:
+
+flutter analyze
+
+Run tests:
+
+flutter test
+
+Format the project:
+
+dart format .
+
+Check available devices:
+
+flutter devices
+
+🔒 Security Considerations
+
+Because Money Pilot handles financial information, security is an important part of the application design.
+
+Recommended production practices include:
+
+Never commit Firebase secrets or private credentials
+
+Protect Firestore using appropriate security rules
+
+Validate authenticated users before accessing financial records
+
+Avoid storing unnecessary sensitive information
+
+Protect local application access with authentication
+
+Use secure communication for remote services
+
+Validate synchronization operations
+
+Maintain appropriate database backups
+
+Keep third-party dependencies updated
+
+🎯 Project Goals
+
+Money Pilot aims to provide a practical personal finance solution that makes it easier to:
+
+Understand spending habits
+
+Track income and expenses
+
+Maintain monthly budgets
+
+Monitor financial progress
+
+Work without continuous internet connectivity
+
+Synchronize data across supported environments
+
+Generate professional financial reports
+
+Protect access to financial information
+
+🔮 Future Improvements
+
+Potential future enhancements include:
+
+📈 Advanced financial forecasting
+
+🔔 Budget limit notifications
+
+📊 More detailed analytics
+
+🔄 Improved conflict resolution for cloud synchronization
+
+💳 Recurring transactions
+
+📅 Recurring income and expenses
+
+🎯 Savings goals
+
+💰 Debt tracking
+
+🏦 Bank account management
+
+📤 CSV/Excel exports
+
+📱 Improved tablet and desktop layouts
+
+🌐 Additional currencies
+
+🔐 Enhanced application security
+
+☁️ Improved multi-device synchronization
+
+📌 Project Status
+
+Active Development
+
+Money Pilot is a Flutter-based personal finance management project focused on combining modern UI design with practical financial management, offline-first storage, cloud synchronization, analytics, and reporting.
+
+The architecture is designed to support continued development without tightly coupling business logic to the UI or database implementation.
+
+👨‍💻 Author
+
+Rohan Ali
+
+Flutter & Mobile Application Developer
+
+GitHub: R0hanAli
+
+LinkedIn: Rohan Ali
+
+📄 License
+
+This project is maintained for development and educational purposes.
+
+Add an appropriate open-source license if the repository is intended for public distribution.
+
+💰 Money Pilot
+
+Track your money. Understand your spending. Plan your future.
