@@ -188,8 +188,6 @@ The synchronization system coordinates:
 - Firestore updates
 - Local-to-cloud data consistency
 
-When the device comes back online, queued operations can be synchronized with the remote database.
-
 ---
 
 # 🔐 Biometric Authentication
