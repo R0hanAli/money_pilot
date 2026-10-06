@@ -188,6 +188,7 @@ The synchronization system coordinates:
 - Firestore updates
 - Local-to-cloud data consistency
 
+
 ---
 
 # 🔐 Biometric Authentication
